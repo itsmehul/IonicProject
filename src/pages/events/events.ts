@@ -17,7 +17,9 @@ export class EventsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
+  popThis(){
+    this.navCtrl.pop();
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad EventsPage');
   }
