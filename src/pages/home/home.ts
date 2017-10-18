@@ -1,6 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavController, ToastController } from 'ionic-angular';
-import { EventsPage } from '../events/events';
+import { RegisterPage } from '../register/register';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -9,21 +10,12 @@ import { EventsPage } from '../events/events';
 })
 export class HomePage {
 
-  @ViewChild('username') uname;
-  @ViewChild('password') pass;
-
   constructor(public navCtrl: NavController, public toastCtrl: ToastController) {
-
   }
-
-
-  openEventsPage() {
-    let toast = this.toastCtrl.create({
-      message: this.uname.value + ' is logged in',
-      duration: 3000
-    });
-    toast.present();
-    this.navCtrl.push(EventsPage);
+  login() {
+    this.navCtrl.push(LoginPage);
   }
-
+  register() {
+    this.navCtrl.push(RegisterPage);
+  }
 }

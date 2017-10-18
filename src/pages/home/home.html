@@ -1,26 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Login
+      Dot Com Club
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
 
-    <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" value="" #username></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Password</ion-label>
-      <ion-input type="password" #password></ion-input>
-    </ion-item>
-
-  </ion-list>
   <div padding>
-    <button ion-button full (click)="openEventsPage()">Sign in</button>
+    <button ion-button full (click)="login()">Log In</button>
+  </div>
+  <div padding>
+    <button ion-button full (click)="register()">Register</button>
   </div>
 </ion-content>

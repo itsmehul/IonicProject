@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the EventsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @IonicPage()
 @Component({
@@ -15,7 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class EventsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  email: string='mehul';
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+  private fire:AngularFireAuth) {
+  this.email=fire.auth.currentUser.email;
   }
   popThis(){
     this.navCtrl.pop();
